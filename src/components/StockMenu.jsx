@@ -17,7 +17,7 @@ const StockMenu = ({ exchange, onSelectStock, onGoHome }) => {
         ))}
       </ul>
       <button
-        className="mt-4 py-1 w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
+        className="mt-4 py-1 w-full bg-gray-400 hover:bg-gray-500 text-white rounded-lg"
         onClick={onGoHome}
       >
         Main Menu

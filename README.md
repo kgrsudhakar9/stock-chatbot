@@ -42,6 +42,7 @@ To get started with the project, follow these steps:
     Open your browser and navigate to http://localhost:5173.
 
 4. **Usage**:
+Created here 5 functonal components. ChatBot.jsx is base component for chatbot have child components like StockMenu, StockDetail, MessageInput, ExchangeMenu.
 On the home screen, you can select a stock exchange by typing its name (e.g., LSEG) or code (e.g., LSE).
 After selecting an exchange, you'll see a list of top stocks traded on that exchange.
 You can view stock details by entering the stock code or name in the message input field and clicking the send icon.
