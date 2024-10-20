@@ -9,8 +9,8 @@ const ExchangeMenu = ({ onSelectExchange }) => {
 
   return (
     <div>
-      <h3 className="text-lg font-semibold mb-3">Hello! Welocome to LSEG. I'm here to help you.</h3>
-      <h3 className="text-lg font-semibold mb-3">Please select a Stock Exchange.</h3>
+      <h5 className="text-sm mb-3">Hello! Welocome to LSEG. I'm here to help you.</h5>
+      <h6 className="text-sm mb-3">Please select a Stock Exchange.</h6>
       <ul className="space-y-2">
         {exchanges.map((exchange) => (
           <li key={exchange.code}>

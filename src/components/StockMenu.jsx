@@ -3,7 +3,7 @@ import React from 'react';
 const StockMenu = ({ exchange, onSelectStock, onGoHome }) => {
   return (
     <div>
-      <h3 className="text-lg font-semibold mb-3">Please select a stock.</h3>
+      <h6 className="text-sm mb-3">Please select a stock.</h6>
       <ul className="space-y-2">
         {exchange.topStocks.map((stock) => (
           <li key={stock.code}>
@@ -17,7 +17,7 @@ const StockMenu = ({ exchange, onSelectStock, onGoHome }) => {
         ))}
       </ul>
       <button
-        className="mt-4 py-2 w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
+        className="mt-4 py-1 w-full bg-blue-500 hover:bg-blue-600 text-white rounded-lg"
         onClick={onGoHome}
       >
         Main Menu

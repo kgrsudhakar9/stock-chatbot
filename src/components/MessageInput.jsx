@@ -24,7 +24,6 @@ const MessageInput = ({ onUserInput }) => {
     <form onSubmit={handleFormSubmit} className="mt-4 flex">
       <input
         type="text"
-        // className="flex-1 p-2 border rounded-l-lg"
         value={input}
         onChange={handleInputChange}
         placeholder="Type exchange or stock code..."
