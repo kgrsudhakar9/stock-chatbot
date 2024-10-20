@@ -11,6 +11,7 @@ const ChatBot = () => {
   const [selectedExchange, setSelectedExchange] = useState(null);
   const [selectedStock, setSelectedStock] = useState(null);
 
+   // Handle to select exchange or type input
   const handleSelectExchange = (exchangeInput) => {
     const selectedExchangeInput = exchangeInput.trim().toUpperCase();
     const exchange = StockData.find((ex) => ex.code === selectedExchangeInput || ex.stockExchange.toUpperCase() === selectedExchangeInput);
@@ -22,6 +23,7 @@ const ChatBot = () => {
     }
   };
 
+  // Handle to select stock or type input
   const handleSelectStock = (stockCode) => {
     if (selectedExchange) {
       const selectedStockInput = stockCode.trim().toUpperCase();
@@ -48,10 +50,12 @@ const ChatBot = () => {
     }
   };
 
+  // Back Button
   const handleGoBack = () => {
     setView('stocks');
   };
 
+  // Home Button
   const handleGoHome = () => {
     setView('home');
     setSelectedExchange(null);
