@@ -8,15 +8,12 @@ A simple React-based chatbot that allows users to interactively select stock exc
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
 - Select from three stock exchanges: LSEG, NASDAQ, NYSE.
 - View top stocks traded on the selected exchange.
 - Retrieve stock details and latest prices by entering stock codes or names.
-- Intuitive message input with real-time updates.
 
 ## Technologies Used
 
@@ -24,7 +21,6 @@ A simple React-based chatbot that allows users to interactively select stock exc
 - **Tailwind CSS**: For styling the components.
 - **Font Awesome**: For using icons (e.g., the send icon).
 - **JavaScript**: For client-side scripting.
-- **JSON**: For storing and retrieving stock exchange data.
 
 ## Installation
 
@@ -39,10 +35,10 @@ To get started with the project, follow these steps:
 3. **Run the application**:
     npm run dev
     
-    Open your browser and navigate to http://localhost:5173.
+    Open your browser and navigate to http://localhost:5173
 
 4. **Usage**:
-Created here 5 functonal components. ChatBot.jsx is base component for chatbot have child components like StockMenu, StockDetail, MessageInput, ExchangeMenu.
+Created here 5 functonal components. ChatBot.jsx is base component for chatbot have child components like StockMenu, StockDetail, InputMessage, MenuExchange.
 On the home screen, you can select a stock exchange by typing its name (e.g., LSEG) or code (e.g., LSE).
 After selecting an exchange, you'll see a list of top stocks traded on that exchange.
 You can view stock details by entering the stock code or name in the message input field and clicking the send icon.

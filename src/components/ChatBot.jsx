@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import ExchangeMenu from './ExchangeMenu';
+import MenuExchange from './MenuExchange';
 import StockMenu from './StockMenu';
 import StockDetail from './StockDetail';
-import MessageInput from './MessageInput';
+import InputMessage from './InputMessage';
 import StockData from '../assets/data/chatbot_stock_data.json';
 
 const ChatBot = () => {
-  // selected state values 'home', 'stocks', 'stockDetail'
+  // view state values are used like home,stocks, stockDetail
   const [view, setView] = useState('home');
   const [selectedExchange, setSelectedExchange] = useState(null);
   const [selectedStock, setSelectedStock] = useState(null);
 
   const handleSelectExchange = (exchangeInput) => {
-    const selectedInput = exchangeInput.trim().toUpperCase();
-    const exchange = StockData.find((ex) => ex.code === selectedInput || ex.stockExchange.toUpperCase() === selectedInput);
+    const selectedExchangeInput = exchangeInput.trim().toUpperCase();
+    const exchange = StockData.find((ex) => ex.code === selectedExchangeInput || ex.stockExchange.toUpperCase() === selectedExchangeInput);
     if (exchange) {
       setSelectedExchange(exchange);
       setView('stocks');
@@ -39,7 +39,7 @@ const ChatBot = () => {
     }
   };
 
-   // Handle user input from MessageInput component
+   // Handle user input from InputMessage component
    const handleUserInput = (input) => {
     if (view === 'home') {
       handleSelectExchange(input);
@@ -61,7 +61,7 @@ const ChatBot = () => {
   return (
     <div className="p-4 max-w-lg mx-auto bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-lg font-bold mb-4 text-white bg-blue-500 p-2 rounded-lg">LSEG chatbot</h2>
-      {view === 'home' && <ExchangeMenu onSelectExchange={handleSelectExchange} />}
+      {view === 'home' && <MenuExchange onSelectExchange={handleSelectExchange} />}
       {view === 'stocks' && selectedExchange && (
         <StockMenu
           exchange={selectedExchange}
@@ -76,8 +76,8 @@ const ChatBot = () => {
           onGoHome={handleGoHome}
         />
       )}
-      {/* Pass handleUserInput to MessageInput */}
-      < MessageInput onUserInput={handleUserInput} />
+      {/* Pass handleUserInput to InputMessage */}
+      < InputMessage onUserInput={handleUserInput} />
     </div>
   );
 };

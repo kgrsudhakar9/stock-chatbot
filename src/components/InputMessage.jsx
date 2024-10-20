@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-const MessageInput = ({ onUserInput }) => {
+const InputMessage = ({ onUserInput }) => {
   const [input, setInput] = useState('');
 
   const handleInputChange = (e) => {
@@ -35,4 +35,4 @@ const MessageInput = ({ onUserInput }) => {
   );
 };
 
-export default MessageInput;
+export default InputMessage;

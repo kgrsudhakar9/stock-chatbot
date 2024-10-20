@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExchangeMenu = ({ onSelectExchange }) => {
+const MenuExchange = ({ onSelectExchange }) => {
   const exchanges = [
     { code: 'LSE', name: 'London Stock Exchange' },
     { code: 'NYSE', name: 'New York Stock Exchange' },
@@ -15,10 +15,10 @@ const ExchangeMenu = ({ onSelectExchange }) => {
         {exchanges.map((exchange) => (
           <li key={exchange.code}>
             <button
-              onClick={() => onSelectExchange(exchange.code)}
+              onClick={() => onSelectExchange(exchange?.code)}
               className="w-full py-2 bg-gray-200 hover:bg-gray-300 text-center rounded-lg transition-all"
             >
-              {exchange.name}
+              {exchange?.name}
             </button>
           </li>
         ))}
@@ -27,4 +27,4 @@ const ExchangeMenu = ({ onSelectExchange }) => {
   );
 };
 
-export default ExchangeMenu;
+export default MenuExchange;
